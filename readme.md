@@ -31,3 +31,12 @@ Instale os pacotes:
 
 Execute o comando `make` para executar o simulador.
 
+## Variáveis do CSV
+
+As variáveis armazenadas no CSV são:
+
+- número de agentes envolvidos no modelo
+- número de trocas realizadas entre agentes
+- índice de Gini
+- probabilidade de troca de riqueza entre pessoas com riquezas parecidas
+- número de épocas do modelo
