@@ -1,5 +1,5 @@
 import mesa
-
+from mesa.visualization.modules import CanvasGrid, ChartModule
 from .model import BoltzmannWealthModel
 
 
@@ -16,8 +16,8 @@ def agent_portrayal(agent):
     return portrayal
 
 
-grid = mesa.visualization.CanvasGrid(agent_portrayal, 10, 10, 500, 500)
-chart = mesa.visualization.ChartModule(
+grid = CanvasGrid(agent_portrayal, 10, 10, 500, 500)
+chart = ChartModule(
     [{"Label": "Gini", "Color": "#0000FF"}], data_collector_name="datacollector"
 )
 

@@ -1,39 +1,33 @@
-# Boltzmann Wealth Model (Tutorial)
+# Boltzmann Wealth Model
 
-## Summary
+Artur Filgueiras Scheiba Zorron - 180013696
 
-A simple model of agents exchanging wealth. All agents start with the same amount of money. Every step, each agent with one unit of money or more gives one unit of wealth to another random agent. This is the model described in the [Intro Tutorial](http://mesa.readthedocs.io/en/latest/intro-tutorial.html).
+## Apresentação
 
-As the model runs, the distribution of wealth among agents goes from being perfectly uniform (all agents have the same starting wealth), to highly skewed -- a small number have high wealth, more have none at all.
+O modelo inicial de riqueza de Boltzmann é um modelo dinâmico de equilíbrio de riqueza. Sua ideia inicial de equilíbrio econômico é que os agentes do modelo randomicamente selecionem com quais outros agentes eles irão trocar riqueza. Com estas trocas, calcula-se o índice de Gini para entender quão desigual é esta sociedade.
 
-## How to Run
+O novo modelo de riqueza de Boltzmann é um modelo dinâmico de equilíbrio de riqueza porém um pouco distinto do original. Enquanto o modelo inicial é completamente randomico, o novo modelo força que os agentes com riquezas parecidas tenham mais chance de trocar riquezas. Além disso, será analisado o índice de Gini para entender quão desigual é esta sociedade e também o número de trocas que foram feitas no total entre todos os agentes do modelo.
 
-To follow the tutorial examples, launch the Jupyter Notebook and run the code in ``Introduction to Mesa Tutorial Code.ipynb``.
+## Hipótese causal
 
-To launch the interactive server, as described in the [last section of the tutorial](http://mesa.readthedocs.io/en/latest/intro-tutorial.html#adding-visualization), run:
+A hipótese causal que quero comprovar é de que quanto maior a probabilidade de troca de riqueza entre pessoas com riquezas parecidas, maior a desigualdade social e menor o número total de trocas feitas.
 
-```
-    $ python viz_money_model.py
-```
+## Alterações no código
 
-If your browser doesn't open automatically, point it to [http://127.0.0.1:8521/](http://127.0.0.1:8521/). When the visualization loads, press Reset, then Run.
+Adicionei duas variaveis para o modelo: uma independente a nivel do agente e uma dependente a nivel do modelo.
 
+A primeira variavel independente é a probabilidade de troca de riqueza entre pessoas com riquezas parecidas.
 
-## Files
+A segunda variavel dependente é o número de trocas realizadas entre agentes.
 
-* ``Introduction to Mesa Tutorial Code.ipynb``: Jupyter Notebook with all the steps as described in the tutorial.
-* ``money_model.py``: Final version of the model.
-* ``viz_money_model.py``: Creates and launches interactive visualization.
+## Como usar o simulador
 
-## Further Reading
+Instale os pacotes:
 
-The full tutorial describing how the model is built can be found at:
-http://mesa.readthedocs.io/en/latest/intro-tutorial.html
+- jupyter
+- matplotlib
+- mesa
+- numpy
 
-This model is drawn from econophysics and presents a statistical mechanics approach to wealth distribution. Some examples of further reading on the topic can be found at:
+Execute o comando `make` para executar o simulador.
 
-[Milakovic, M. A Statistical Equilibrium Model of Wealth Distribution. February, 2001.](https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SCE2001&paper_id=214)
-
-[Dragulescu, A and Yakovenko, V. Statistical Mechanics of Money, Income, and Wealth: A Short Survey. November, 2002](http://arxiv.org/pdf/cond-mat/0211175v1.pdf)
-____
-You will need to open the file as a Jupyter (aka iPython) notebook with an iPython 3 kernel. Required dependencies are listed in the provided `requirements.txt` file which can be installed by running `pip install -r requirements.txt`

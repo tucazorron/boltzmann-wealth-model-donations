@@ -10,8 +10,8 @@ def compute_gini(model):
 
 
 class BoltzmannWealthModel(mesa.Model):
-    """A simple model of an economy where agents exchange currency at random.
-
+    """
+    A simple model of an economy where agents exchange currency at random.
     All the agents begin with one unit of currency, and each time step can give
     a unit of currency to another agent. Note how, over time, this produces a
     highly skewed distribution of wealth.
@@ -47,7 +47,9 @@ class BoltzmannWealthModel(mesa.Model):
 
 
 class MoneyAgent(mesa.Agent):
-    """An agent with fixed initial wealth."""
+    """
+    An agent with fixed initial wealth.
+    """
 
     def __init__(self, unique_id, model):
         super().__init__(unique_id, model)
