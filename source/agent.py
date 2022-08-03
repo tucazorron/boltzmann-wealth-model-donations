@@ -18,13 +18,13 @@ class MoneyAgent(mesa.Agent):
         cellmates = self.model.grid.get_cell_list_contents([self.pos])
         if len(cellmates) > 1:
             other = self.random.choice(cellmates)
-            if self.wealth > other.wealth and self.donation_probability > random.random():
-                donation = (self.wealth + other.wealth) // 2
+            if self.wealth > other.wealth + 3 and self.donation_probability > random.random():
+                donation = (self.wealth - other.wealth) // 2
                 self.wealth -= donation
                 other.wealth += donation
             else:
-                other.wealth += 1
                 self.wealth -= 1
+                other.wealth += 1
 
     def step(self):
         self.move()
