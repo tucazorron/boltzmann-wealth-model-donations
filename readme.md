@@ -6,7 +6,7 @@ Artur Filgueiras Scheiba Zorron - 180013696
 
 O modelo inicial de riqueza de Boltzmann é um modelo dinâmico de equilíbrio de riqueza. Sua ideia inicial de equilíbrio econômico é que os agentes do modelo randomicamente selecionem com quais outros agentes eles irão trocar riqueza. Com estas trocas, calcula-se o índice de Gini para entender quão desigual é esta sociedade.
 
-O novo modelo de riqueza de Boltzmann é um modelo dinâmico de equilíbrio de riqueza porém um pouco distinto do original. Enquanto o modelo inicial é completamente randomico, o novo modelo força que os agentes com riquezas parecidas tenham mais chance de trocar riquezas. Além disso, será analisado o índice de Gini para entender quão desigual é esta sociedade e também o número de trocas que foram feitas no total entre todos os agentes do modelo.
+O novo modelo de riqueza de Boltzmann proposto por mim é um modelo dinâmico de equilíbrio de riqueza porém um pouco distinto do original. Enquanto o modelo inicial é completamente randomico, o novo modelo força que os agentes com riquezas parecidas tenham mais chance de trocar riquezas. Além disso, será analisado o índice de Gini para entender quão desigual é esta sociedade e também o número de trocas que foram feitas no total entre todos os agentes do modelo.
 
 ## Hipótese causal
 
@@ -30,13 +30,3 @@ Instale os pacotes:
 - numpy
 
 Execute o comando `make` para executar o simulador.
-
-## Variáveis do CSV
-
-As variáveis armazenadas no CSV são:
-
-- número de agentes envolvidos no modelo
-- número de trocas realizadas entre agentes
-- índice de Gini
-- probabilidade de troca de riqueza entre pessoas com riquezas parecidas
-- número de épocas do modelo
