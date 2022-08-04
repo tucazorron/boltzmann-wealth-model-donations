@@ -1,11 +1,11 @@
 import mesa
-import random
 
 class MoneyAgent(mesa.Agent):
+    """An agent with fixed initial wealth."""
+
     def __init__(self, unique_id, model):
         super().__init__(unique_id, model)
         self.wealth = 1
-        self.donation_probability = model.donation_probability
 
     def move(self):
         possible_steps = self.model.grid.get_neighborhood(
@@ -18,13 +18,8 @@ class MoneyAgent(mesa.Agent):
         cellmates = self.model.grid.get_cell_list_contents([self.pos])
         if len(cellmates) > 1:
             other = self.random.choice(cellmates)
-            if self.wealth > other.wealth + 3 and self.donation_probability > random.random():
-                donation = (self.wealth - other.wealth) // 2
-                self.wealth -= donation
-                other.wealth += donation
-            else:
-                self.wealth -= 1
-                other.wealth += 1
+            other.wealth += 1
+            self.wealth -= 1
 
     def step(self):
         self.move()
