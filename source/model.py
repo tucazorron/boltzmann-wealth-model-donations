@@ -16,6 +16,7 @@ def compute_wealth_standard_deviation(model):
 class BoltzmannWealthModel(mesa.Model):
     def __init__(self, N=100, width=10, height=10, D=0):
         self.num_agents = N
+        self.donation_probability = D
         self.grid = mesa.space.MultiGrid(width, height, True)
         self.donation_probability = D
         self.schedule = mesa.time.RandomActivation(self)
@@ -43,6 +44,6 @@ class BoltzmannWealthModel(mesa.Model):
         self.schedule.step()
         self.datacollector.collect(self)
 
-    def run_model(self, n):
+    def run_model(self, n=200):
         for i in range(n):
             self.step()

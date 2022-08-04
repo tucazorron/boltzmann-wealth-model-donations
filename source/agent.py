@@ -1,5 +1,5 @@
 import mesa
-import random
+from random import random
 
 class MoneyAgent(mesa.Agent):
     def __init__(self, unique_id, model):
@@ -18,7 +18,7 @@ class MoneyAgent(mesa.Agent):
         cellmates = self.model.grid.get_cell_list_contents([self.pos])
         if len(cellmates) > 1:
             other = self.random.choice(cellmates)
-            if self.wealth > other.wealth + 3 and self.donation_probability > random.random():
+            if self.wealth > other.wealth + 3 and self.donation_probability > random():
                 donation = (self.wealth - other.wealth) // 2
                 self.wealth -= donation
                 other.wealth += donation
