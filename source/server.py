@@ -54,8 +54,8 @@ model_params = {
         0.1,
         description="Choose the probability that an agent will donate money",
     ),
-    "width": 20,
-    "height": 20,
+    "width": 10,
+    "height": 10,
 }
 
 server = mesa.visualization.ModularServer(
