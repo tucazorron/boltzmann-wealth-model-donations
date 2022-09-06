@@ -14,7 +14,7 @@ O desvio padrão é um cáculo estatístico que calcula a variância de uma amos
 
 ## Hipótese causal
 
-A hipótese causal que quero comprovar é de que quanto maior a cultura de doação em uma sociedade, maior a probabilidade de que a riqueza dos agentes seja equilibrada levando a uma sociedade menos desigual com um menor índice Gini e um menor desvio padrão da riqueza dos agentes.
+A hipótese causal que quero comprovar é de que quanto maior a cultura de doação em uma sociedade, maior a probabilidade de que a riqueza dos agentes sejam equilibradas levando a uma sociedade menos desigual com um menor índice Gini e um menor desvio padrão da riqueza dos agentes.
 
 ## Alterações no código
 
