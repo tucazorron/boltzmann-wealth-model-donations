@@ -22,12 +22,9 @@ class BoltzmannWealthModel(mesa.Model):
         self.schedule = mesa.time.RandomActivation(self)
         self.datacollector = mesa.DataCollector(
             model_reporters={
-                "Gini": compute_gini,
-                "Wealth Standard Deviation": compute_wealth_standard_deviation
+                "gini": compute_gini,
+                "wealth_standard_deviation": compute_wealth_standard_deviation
             },
-            agent_reporters={
-                "Wealth": "wealth"
-            }
         )
         
         for i in range(self.num_agents):

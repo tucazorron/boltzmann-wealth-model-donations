@@ -4,12 +4,12 @@ import pandas as pd
 from datetime import datetime
 from source.model import BoltzmannWealthModel
 
-steps = 100
-iterations = 100
+steps = 200
+iterations = 200
 
 params = {
-    "N": 20,
-    "D": 1,
+    "N": 100,
+    "D": np.arange(0, 1.1, 0.5),
     "width": 10,
     "height": 10,
 }
@@ -25,19 +25,4 @@ if __name__ == "__main__":
 
     dataframe = pd.DataFrame(data)
 
-    now = str(datetime.now()).replace(":", "-")
-
-    suffix = (
-        "_" +
-        str(iterations) +
-        "_iterations_" +
-        str(steps) +
-        "_steps_" +
-        now
-    )
-
-    dataframe.to_csv(
-        "BoltzmannWealthModelDonationData" +
-        suffix +
-        ".csv"
-    )
+    dataframe.to_csv("dataset.csv")

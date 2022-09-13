@@ -33,4 +33,6 @@ Instale os pacotes:
 - mesa
 - numpy
 
-Execute o comando `make` para executar o simulador.
+Execute o comando `make run` para executar o simulador no navegador.
+
+Execute o comando `make batch_run` para executar o simulador em batch mode.
